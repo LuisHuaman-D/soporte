@@ -261,7 +261,7 @@ background-repeat: no-repeat;
 .bnnrsp img {
         width: 100%;
         max-width: 410px;
-        min-width: 380px;
+        min-width: 230px;
         border-radius: 20px;
 }
 
