@@ -5,13 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soporte Técnico a Domicilio</title>
     <style>
-      
+      body { margin: 0;}
+    
+      img {
+        width: 100%;
+        border-radius: 40px;}
+
+.container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        padding: 70px;
+        box-sizing: border-box;}
+
+a.bton {
+        background: black;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        margin-top: 36px;
+        display: block;
+        width: 193px;
+        max-width: 100%;
+        text-align: center;}
+        .mvil{ display:none}
+        
+@media (max-width: 1250px) {
+ .container {
+            padding: 10px;
+        }
+    .scri{
+        display:none;
+    }
+}
     </style>
 </head>
 <body>
     <div class="container">
-      <img src="img/tecnico de computadoras a domicilio.webp">
-      <a>Ver Detalles Del Servicio </a>
+      <img class="scri" src="img/tecnico de computadoras a domicilio.webp">
+    <img class="mvil" src="img/tecnicodecomputadoras.webp">
+      <a href="https://tecnicodecomputadoras.com/tecnico-de-computadoras-a-domicilio.html">Ver Detalles Del Servicio </a>
     </div>
 </body>
 </html>
