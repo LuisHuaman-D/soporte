@@ -587,7 +587,10 @@ a.itemff.chat-whatsapp.appescrito {
 .nta-alerta{
     font-size: 12px;
 }
-
+.refimg img {
+  height: 70px!important;
+  width: 120px!important;
+}
   }
 
   .subtcont {
@@ -695,10 +698,13 @@ a.itemff.chat-whatsapp.appescrito {
 }
 
 .refimg img {
-  height:100%;
+  height: 80px;
   border-radius: 10px;
   filter: opacity(0.5);
+  object-fit: contain;
+  width: 180px;
 }
+
 .refimg img:hover {
   filter: opacity(1);
 }
