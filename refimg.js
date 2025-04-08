@@ -44,5 +44,6 @@ const nombresImagenes = [
     img.alt = nombre;
     img.style.margin = '5px';
     img.style.maxWidth = ''; // Ajusta según diseño
+    img.loading = "lazy"; 
      contenedor.appendChild(img);
   });
