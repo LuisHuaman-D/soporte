@@ -587,10 +587,11 @@ a.itemff.chat-whatsapp.appescrito {
 .nta-alerta{
     font-size: 12px;
 }
-.refimg img {
-  height: 70px!important;
-  width: 120px!important;
-}
+
+
+/*deslizar*/
+.slider-wrapper { height: 60px!important; }
+.refimg {height:60px!important;}
   }
 
   .subtcont {
@@ -686,34 +687,29 @@ a.itemff.chat-whatsapp.appescrito {
 
 /*deslizar*/
 .slider-wrapper {
- overflow: hidden;
   width: 100%;
+  overflow: hidden;
+  height: 120px; 
+  position: relative;
 }
 
 .refimg {
+  height:120px;
   display: flex;
-
-  animation: deslizar 30s linear infinite;
-
+  gap: 10px;
+  position:relative;
+  top: 0;
+  left: 0;
+  will-change: transform;
 }
 
 .refimg img {
-  height: 80px;
-  border-radius: 10px;
-  filter: opacity(0.5);
+  height: 100%;
+  width: auto;
   object-fit: contain;
-  width: 180px;
+  border-radius: 8px;
+  opacity: 0.6;
 }
-
-.refimg img:hover {
-  filter: opacity(1);
-}
-
-@keyframes deslizar {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.refimg :hover {
+   opacity: 1;
 }
