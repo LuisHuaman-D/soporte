@@ -678,3 +678,36 @@ a.itemff.chat-whatsapp.appescrito {
   font-size: 15px;
   font-weight: 500;
 }
+
+
+
+/*deslizar*/
+.slider-wrapper {
+  /*overflow: hidden;*/
+  width: 100%;
+}
+
+.refimg {
+  display: flex;
+
+  animation: deslizar 30s linear infinite;
+
+}
+
+.refimg img {
+  height:100%;
+  border-radius: 10px;
+  filter: opacity(0.5);
+}
+.refimg img:hover {
+  filter: opacity(1);
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
