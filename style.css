@@ -683,7 +683,7 @@ a.itemff.chat-whatsapp.appescrito {
 
 /*deslizar*/
 .slider-wrapper {
-  /*overflow: hidden;*/
+ overflow: hidden;
   width: 100%;
 }
 
