@@ -5,18 +5,18 @@
 
 var swiper = new Swiper(".mySwiper", {
   freeMode: true,
-  effect: 'fade',
+  effect: 'slider',
   fadeEffect: {
     crossFade: true
   },
 autoplay: {
- delay: 6500,
- disableOnInteraction: false
+ delay: 7000,
+ disableOnInteraction: true
 },
- pagination: {
+ /*pagination: {
  el: ".swiper-pagination",
  clickable: true
-},
+},*/
 navigation: {
  nextEl: ".swiper-button-next",
  prevEl: ".swiper-button-prev"
@@ -40,7 +40,7 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 
-
+/*
 const sliderImg = document.getElementById("slidertop")
 const imgMovil = [
     {url: "./img/tecnicodecomputadoras.webp", alt:"tecnico de computadoras a domicilio" },
@@ -80,3 +80,4 @@ actualizarImagenes();
 
 //window.addEventListener('resize', actualizarImagenes);
 
+*/

@@ -449,7 +449,9 @@ a.itemff.chat-whatsapp.appescrito {
     }
   }
   
-
+  .lista-distritos img {
+    border-radius: 10px!important;
+  }
 
   .subtcont{
     font-size: 12px;
@@ -598,6 +600,7 @@ a.itemff.chat-whatsapp.appescrito {
 .nta-alerta{
     font-size: 12px;
 }
+
 
 
 /*deslizar*/
