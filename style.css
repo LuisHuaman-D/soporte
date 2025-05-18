@@ -368,7 +368,17 @@ a.itemff.chat-whatsapp.appescrito {
     width: 100%;
     height: 100%;
 }
+@media (min-width: 600px) {
+.boxanimabton {
+  animation: loopY 3s infinite ease-in-out;
+}
 
+@keyframes loopY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(00); }
+}
+}
 
 .boxanimabton{
     --border-width: 2px;
@@ -457,6 +467,7 @@ a.itemff.chat-whatsapp.appescrito {
     font-size: 12px;
   }
 
+
 .dos-col {
   display: grid;
   grid-template-columns:50% 50%; 
@@ -499,6 +510,9 @@ a.itemff.chat-whatsapp.appescrito {
     .boxanimabton {
         display: block;
 }
+
+
+
     .whatsappescritorio{
         display: none;
     }
