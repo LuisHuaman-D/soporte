@@ -4,8 +4,8 @@
 });*/
 
 var swiper = new Swiper(".mySwiper", {
-  freeMode: true,
-  effect: 'slider',
+  loop: true,
+  /*freeMode: true,*/
   fadeEffect: {
     crossFade: true
   },

@@ -257,6 +257,14 @@ background-repeat: no-repeat;
 
       }
 
+.flex1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.mbtop.iconpago.flex1 img {
+        width: 265px;
+}
 
 .bnnrsp img {
         width: 100%;
@@ -373,6 +381,7 @@ a.itemff.chat-whatsapp.appescrito {
   animation: loopY 3s infinite ease-in-out;
 }
 
+
 @keyframes loopY {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(10px); }
@@ -486,6 +495,9 @@ a.itemff.chat-whatsapp.appescrito {
   display: none;
 }
 @media (max-width: 600px) {
+  .flex1 {
+        display:block;
+}
   .ctz-es{
     display: none;
   }
