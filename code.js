@@ -5,14 +5,16 @@
 
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  /*freeMode: true,*/
+  effect: "fade",
   fadeEffect: {
-    crossFade: true
+    crossFade: false
   },
 autoplay: {
- delay: 7000,
- disableOnInteraction: true
+ delay: 5000,
+ /*disableOnInteraction: true*/
+  pauseOnMouseEnter: true
 },
+
  /*pagination: {
  el: ".swiper-pagination",
  clickable: true
@@ -37,6 +39,7 @@ var swiper = new Swiper(".mySwiper2", {
       spaceBetween: 30, 
     }
   }
+  
 });
 
 
