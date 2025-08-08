@@ -1,8 +1,3 @@
-
-/*var lazyLoadInstance = new LazyLoad({
-  
-});*/
-
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   effect: "fade",
@@ -10,7 +5,7 @@ var swiper = new Swiper(".mySwiper", {
     crossFade: false
   },
 autoplay: {
- delay: 5000,
+ delay: 6000,
  /*disableOnInteraction: true*/
   pauseOnMouseEnter: true
 },
@@ -43,44 +38,69 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 
-/*
-const sliderImg = document.getElementById("slidertop")
-const imgMovil = [
-    {url: "./img/tecnicodecomputadoras.webp", alt:"tecnico de computadoras a domicilio" },
-    {url: "./img/tecnicodecomputadoras-esamblaje-de-pc (2).webp", alt:"tecnico de computadoras a domicilio" },
-    {url: "./img/tecnicodecomputadorasadomicilio.webp", alt:"tecnico de computadoras a domicilio" },
-];
-const imgEscritorio = [
-  {url: "./img/tecnico-de-computadoras-a-domicilio.webp", alt:"tecnico de computadoras a domicilio" },
-  {url: "./img/tecnico-a-domicilio-lima.webp", alt:"tecnico de computadoras a domicilio" },
-  {url: "./img/ENSAMBLAJE-DE-PC.webp", alt:"tecnico de computadoras a domicilio" },
-];
+//Interacción de clientes
+ const usuarios = [
+    "Juan", "Pedro", "Luis", "María", "Ana", "Carlos", "Laura", "Diego", "Carmen", "Sofía",
+    "Manuel", "Lucía", "José", "Elena", "Andrés", "Valentina", "Raúl", "Paola", "Felipe", "Isabel"
+  ];
 
-function addImagenes(imgArray) {
-  sliderImg.innerHTML = '';
-  imgArray.forEach(image => {
-    const divImgs = document.createElement("div");
-    divImgs.classList.add("swiper-slide");
+  let lastMensaje = "";
+  let iniciado = false;
 
-    const imgElementos = document.createElement("img");
-    imgElementos.src = image.url;
-    imgElementos.alt = image.alt;
+  function obtenerDiaRelativo(diasDesdeHoy) {
+    const hoy = new Date();
+    const objetivo = new Date();
+    objetivo.setDate(hoy.getDate() + diasDesdeHoy);
 
-    divImgs.appendChild(imgElementos); 
+    const diasSemana = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+    const objetivoDia = objetivo.getDay();
 
-    sliderImg.appendChild(divImgs);
-  });
-}
-
-function actualizarImagenes() {
-  if (window.innerWidth < 600) {
-      addImagenes(imgMovil);
-  } else {
-      addImagenes(imgEscritorio);
+    if (diasDesdeHoy === 0) return "hoy";
+    if (diasDesdeHoy === 1) return "mañana";
+    return `el ${diasSemana[objetivoDia]}`;
   }
-}
-actualizarImagenes();
 
-//window.addEventListener('resize', actualizarImagenes);
+  function generarMensaje() {
+    let mensaje = "";
+    let intentos = 0;
 
-*/
+    do {
+      const nombre = usuarios[Math.floor(Math.random() * usuarios.length)];
+      const dias = Math.floor(Math.random() * 5);
+      const cuando = obtenerDiaRelativo(dias);
+      mensaje = `${nombre} agendó una visita para ${cuando}`;
+      intentos++;
+    } while (mensaje === lastMensaje && intentos < 10);
+
+    lastMensaje = mensaje;
+    return mensaje;
+  }
+
+  function mostrarToast(mensaje) {
+    const toast = document.getElementById("toast");
+    toast.textContent = mensaje;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 5500);
+  }
+
+  function cicloToasts() {
+    const mensaje = generarMensaje();
+    mostrarToast(mensaje);
+
+    const siguienteEn = Math.floor(Math.random() * 8000) + 40000;
+    setTimeout(cicloToasts, siguienteEn);
+  }
+
+  // Inicia con scroll + retardo de 3 segundos
+  window.addEventListener("scroll", () => {
+    if (!iniciado) {
+      iniciado = true;
+
+      setTimeout(() => {
+        cicloToasts();
+      }, 3000);
+    }
+  }, { once: true });

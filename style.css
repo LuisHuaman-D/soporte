@@ -756,3 +756,28 @@ a.itemff.chat-whatsapp.appescrito {
 .refimg img:hover {
    opacity: 1;
 }
+
+
+/*Mensaje de agendo un cliente*/
+
+
+#toast {
+        position: fixed;
+        bottom: 95px;
+        right: -363px;
+        min-width: 265px;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-size: 15px;
+        z-index: 9999;
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease, right 0.5s ease;
+}
+
+    #toast.show {
+      right: 30px;
+      opacity: 1;
+    }
