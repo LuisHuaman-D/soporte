@@ -1,3 +1,4 @@
+/*
 const nombresImagenes = [
     "tecnico-de-computadoras_Mesa de trabajo 1.jpg",
     "tecnico-de-computadoras-22.jpg",
@@ -67,3 +68,4 @@ function animate() {
 }
 
 window.addEventListener('load', animate);
+*/
