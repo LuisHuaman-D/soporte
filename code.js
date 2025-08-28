@@ -107,7 +107,7 @@ var swiper = new Swiper(".mySwiper2", {
   }, { once: true });
   */
 
-
+/*
   const usuarios = [
     "Juan", "Pedro", "Luis", "María", "Ana", "Carlos", "Laura", "Diego", "Carmen", "Sofía",
     "Manuel", "Lucía", "José", "Elena", "Andrés", "Valentina", "Raúl", "Paola", "Felipe", "Isabel"
@@ -220,3 +220,5 @@ window.addEventListener("scroll", () => {
         }, 4000);
     }
 }, { once: true });
+
+*/
