@@ -37,6 +37,44 @@ var swiper = new Swiper(".mySwiper2", {
   
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const rucInput = document.getElementById("rucInput");
+    const contactarAsesorBtn = document.querySelector(".contactarases");
+
+    const rucPattern = /^(10|20)\d{9}$/;
+
+    rucInput.addEventListener("input", function() {
+        this.value = this.value.replace(/\D/g, "");
+        if (this.value.length > 11) {
+            this.value = this.value.slice(0, 11);
+        }
+
+        if (rucPattern.test(this.value)) {
+            contactarAsesorBtn.classList.remove("disabled");
+        } else {
+            contactarAsesorBtn.classList.add("disabled");
+        }
+    });
+
+    contactarAsesorBtn.addEventListener("click", function(event) {
+        if (this.classList.contains("disabled")) {
+            event.preventDefault();
+            return; 
+        }
+
+        const rucValue = rucInput.value;
+        const numeroTelefono = "51972186481";
+
+        let mensajeRUC = `RUC: ${rucValue}`;
+        let mensajeServicios = `¡Hola! deseo cotizar sus servicios de:`;
+
+        const whatsappLink = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensajeRUC)}%0A${encodeURIComponent(mensajeServicios)}`;
+
+        window.open(whatsappLink, "_blank");
+    });
+});
+
+
 
 //Interacción de clientes
  /*

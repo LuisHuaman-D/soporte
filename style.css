@@ -781,3 +781,95 @@ a.itemff.chat-whatsapp.appescrito {
       right: 30px;
       opacity: 1;
     }
+
+    /*Estilos sección empresas*/
+    .cont-asesor{
+            top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(2, 0, 36);
+        background: -webkit-linear-gradient(250deg, rgba(2, 0, 36, 1) 0%, rgb(9, 15, 83) 0%, rgb(6, 34, 112) 46%, rgba(6, 10, 51, 1) 100%);
+        background: -moz-linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(6,10,51,1) 0%, rgba(7,30,92,1) 46%, rgba(6,10,51,1) 100%);
+        background: -o-linear-gradient(250deg, rgba(2,0,36,1) 0%, rgba(6,10,51,1) 0%, rgba(7,30,92,1) 46%, rgba(6,10,51,1) 100%);
+        filter: brightness(1);
+        border-radius: 8px;
+}
+
+
+.cont-asesor{
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 20% 55% 25%;
+  gap: 16px;
+}
+
+.col-ase{
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+        align-content: center;
+        justify-content: center;
+  
+}
+
+@media (max-width: 768px){
+  .container{
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+  }
+  .col-ase{
+    width: 100%;
+    margin-inline: auto;  
+    text-align: center;   
+  }
+  .col-ase.con-img img {
+        width: 70%;
+}
+.col-ase.con-img {
+        margin-top: -50px!important;
+        display: block;
+}
+.col-ase.contact {
+        display: block!important;
+}
+}
+
+.col-ase.con-img {
+        margin-top: -84px;
+}
+
+           .col-ase.contact {
+            text-align: center;
+        }
+
+        #rucInput {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 230px;
+        max-width: 100%;
+        }
+        #rucInput:focus, #rucInput:focus-visible {
+  box-shadow: 0 0 0 2px #303ef3  !important;
+  outline: none !important;
+}
+
+        .contactarases {
+            display: inline-block;
+        width: 230px;
+        margin-top: 10px;
+        padding: 8px 10px;
+        background-color: #007bff07;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        border: 1px solid;
+        }
+        .contactarases.disabled {
+    pointer-events: none;
+       cursor: not-allowed;
+    opacity: 0.5;
+}
