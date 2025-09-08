@@ -379,7 +379,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul> 
                  <li data-equipo="Pc de escritorio">Pc de Escritorio</li>
                <!-- <li data-equipo="Pc Gamer"> Pc Gamer <span>(Con tarjeta de video y/o refri. liquida)</span></li>-->
-               <li data-equipo="Pc Gamer"> Pc de Escritorio con Tarjeta Gráfica</span>
                 <li data-equipo="Laptop">Laptop</li>
                 <li data-equipo="Impresora">Impresora</li>
                 <li data-equipo="All one pc">Pc todo en uno</li>
@@ -397,16 +396,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="step" id="step2">
             <span class="back-btn" id="back2">&#8592; Atrás</span>
             <h2>Su distrito es:</h2>
-            <ul> 
-            <li data-distrito="Barranco">Barranco</li>
-            <li data-distrito="Chorrillos">Chorrillos</li>
-            <li data-distrito="Surco">Surco</li>
-            <li data-distrito="Miraflores">Miraflores</li>
-            <li data-distrito="Surquillo">Surquillo</li>
-            <li data-distrito="Lince">Lince</li>
-            <li data-distrito="San Isidro">San Isidro</li>
-            <li data-distrito="San Borja">San Borja</li>
-        </ul>
+                <ul> 
+                    <li data-distrito="Barranco">Barranco</li>
+                    <li data-distrito="Chorrillos">Chorrillos</li>
+                    <li data-distrito="Surco">Surco</li>
+                    <li data-distrito="Miraflores">Miraflores</li>
+                    <li data-distrito="Surquillo">Surquillo</li>
+                    <li data-distrito="Lince">Lince</li>
+                    <li data-distrito="San Isidro">San Isidro</li>
+                    <li data-distrito="San Borja">San Borja</li>
+                </ul>
+                <div class="descrip">
+            <b style="font-weight: 600;">¿No encuentras tu distrito?</b>
+            Consulta con nuestro asesor para confirmar la cobertura de tu zona.
+            <a class="btonml2" target="_blank"
+                href="https://api.whatsapp.com/send?phone=+51972186481&text=Hola!%20Luis%20requiero%20servicio%20t%C3%A9cnico%20mi%20equipo%20es:">
+                    972 186 481
+            </a>
           </div>
         </div>
   </div>
@@ -439,8 +445,13 @@ document.querySelectorAll('#step1 li').forEach(button => {
 document.querySelectorAll('#step2 li').forEach(button => {
   button.addEventListener('click', () => {
     const distritoSeleccionado = button.dataset.distrito;
-    const mensaje = `Hola! Luis, requiero soporte para mi ${equipoSeleccionado} estoy en el distrito ${distritoSeleccionado}, el inconveniente es: `;
-    
+
+    const mensaje = `Hola Luis requiero soporte para mi ${equipoSeleccionado}\n` +
+                    `estoy en el distrito de ${distritoSeleccionado}.\n` +
+                     `📷 _En un momento te envío una foto del equipo_\n` +
+                    `*El inconveniente es:*\n`;
+                   
+
     // Detectar tamaño de pantalla
     const baseUrl = window.innerWidth > 900 
       ? "https://web.whatsapp.com/send" 
@@ -456,6 +467,7 @@ document.querySelectorAll('#step2 li').forEach(button => {
     step2.classList.remove('active');
   });
 });
+
 
 back1.addEventListener('click', () => {
   modal.style.display = 'none';
