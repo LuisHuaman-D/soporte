@@ -363,7 +363,8 @@ a {
     align-items: center;
 }
 a.itemff.chat-whatsapp.appescrito {
-    background: #060a33;
+      background: #10b60d;
+    background: linear-gradient(135deg, #062e03 0%, #0f9a0c 70%, #12ad07 100%);
     padding: 0px 15px;
     border-radius: 20px;
 }
