@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tecnicodecomputadoras.com/sitemap.xml

@@ -67,7 +67,8 @@ p, h1, h2, h3, h4 {
     margin-top: 35px;
 }
 .subti2{
-    font-size: 14px;
+    font-size: 16px;
+        font-weight: 300;
 }
 section {
     padding: 50px 0px;
@@ -79,7 +80,7 @@ section {
 }
 .container {
     width: 100%;
-    max-width:1300px;
+    max-width:1200px;
     margin: 0 auto;
     box-sizing: content-box;
 }
@@ -216,7 +217,7 @@ background-repeat: no-repeat;
         flex-direction: column;
 }
 .ticonttitu{
-    font-size: 50px;
+    font-size: 33px;
     font-weight: 700;
 }
         
@@ -228,7 +229,7 @@ background-repeat: no-repeat;
       
 .servitxt {
         display: inline-block; 
-        animation: scroll 50s linear infinite; 
+        animation: scroll 20s linear infinite; 
         opacity: 0;
         animation-delay: 0s; 
         font-size: 30px;
@@ -875,4 +876,8 @@ a.itemff.chat-whatsapp.appescrito {
     pointer-events: none;
        cursor: not-allowed;
     opacity: 0.5;
+}
+
+.ticont ul li {
+        font-size: 24px;
 }
