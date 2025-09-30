@@ -399,15 +399,16 @@ a {
 /*bton de whatsapp escritorio fin*/
 
 
-/*
+
 .whatsappescritorio {
     position: sticky;
     bottom: 18px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
+
     z-index: 1;
-}*/
+}
+
 .whatsappescritorio a {
     text-decoration: none;
     color: #fff;
