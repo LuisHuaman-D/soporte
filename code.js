@@ -37,6 +37,26 @@ var swiper = new Swiper(".mySwiper2", {
   
 });
 
+
+  // Swiper para marcas
+const swiperMarcas = new Swiper(".mySwiperMarcas", {
+  slidesPerView: 5,
+  spaceBetween: 10,
+  loop: true,
+   speed: 3000,                   // cuanto mayor, más lento
+  autoplay: {
+    delay:100,                    // sin pausas
+
+  },
+  breakpoints: {
+    400: { slidesPerView: 4 },
+    640: { slidesPerView: 6 },
+    1024: { slidesPerView: 7 }
+  }
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const rucInput = document.getElementById("rucInput");
     const contactarAsesorBtn = document.querySelector(".contactarases");
@@ -74,6 +94,56 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("whatsapp-btn");
+    const sound = document.getElementById("notif-sound");
+    let alreadyShown = false;
+    let audioUnlocked = false;
+
+    // Desbloquea el audio con el primer clic
+    document.addEventListener("click", () => {
+        if (!audioUnlocked) {
+            sound.play().then(() => {
+                sound.pause();     // lo pausamos inmediatamente
+                sound.currentTime = 0;
+                audioUnlocked = true; // ya está listo para sonar en scroll
+               // console.log("🔓 Audio desbloqueado");
+            }).catch(() => {});
+        }
+    });
+
+ function showBtnWithSound() {
+        if (alreadyShown) return;
+
+        btn.classList.add("show-bounce");
+
+        if (audioUnlocked) {
+            sound.currentTime = 0;
+            sound.play().catch(() => {});
+        }
+
+        // Rebote sutil cada 10s
+        setInterval(() => {
+            btn.classList.remove("rebounce");
+            void btn.offsetWidth;
+            btn.classList.add("rebounce");
+        }, 10000);
+
+        alreadyShown = true;
+        window.removeEventListener("scroll", checkScroll);
+        document.removeEventListener("click", showBtnWithSound);
+    }
+
+
+    function checkScroll() {
+        if (window.scrollY > 200) {
+            showBtnWithSound();
+        }
+    }
+
+    window.addEventListener("scroll", checkScroll);
+});
 
 
 //Interacción de clientes

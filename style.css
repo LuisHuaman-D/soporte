@@ -122,7 +122,35 @@ li, ul{
 
 
 /*--*/
+/*MARCAS CARRUSEL INICIO*/
+/* Contenedor general */
+.mySwiperMarcas {
+  width: 100%;
+  padding: 20px 0;
+}
 
+/* Cada slide (marca) */
+.mySwiperMarcas .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen de marca */
+.mySwiperMarcas .swiper-slide img {
+  max-width: 120px;  /* tamaño máximo de logo */
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);     /* en blanco y negro */
+  transition: filter 0.3s, transform 0.3s;
+}
+
+/* Hover con color y zoom */
+.mySwiperMarcas .swiper-slide img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+/*MARCAS CARRUSEL FIN*/
 
 .swiperbrd {
     animation: shadowAnimation 5s infinite;
@@ -130,27 +158,6 @@ li, ul{
     height: 100%;
     border-radius: 20px; 
 }
-
-/*
-  @keyframes shadowAnimation {
-    0% {
-        box-shadow: 0px 5px 15px #025bff; 
-    }
-    25% {
-        box-shadow: 0px 5px 15px #ffffff; 
-    }
-    50% {
-        box-shadow: 0px 5px 15px#fdfd00; 
-    }
-    75% {
-        box-shadow: 0px 5px 15px rgb(43, 255, 0); 
-    }
-
-    100% {
-        box-shadow: 0px 5px 15px rgb(221, 221, 221); 
-    }
-   
-}*/
 
 
 
@@ -348,6 +355,51 @@ a {
 .movil{
     display: none;
 }
+
+
+/*boton de whatsapp escritorio inicio*/
+/* Botón oculto al inicio */
+/* Entrada inicial con opacidad */
+/* Entrada inicial con opacidad */
+@keyframes bounceIn {
+  0%   { transform: scale(0.3); opacity: 0; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Rebote sutil (sin opacidad) */
+@keyframes miniBounce {
+  0%   { transform: scale(0.3); opacity: 0; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#whatsapp-btn {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}
+
+/* Primera animación al aparecer */
+#whatsapp-btn.show-bounce {
+  display: block;
+  opacity: 1;               /* 👈 fijamos que se quede visible */
+  animation: bounceIn 0.8s ease;
+}
+
+/* Rebote repetitivo */
+#whatsapp-btn.rebounce {
+  animation: miniBounce 0.6s ease;
+}
+/*bton de whatsapp escritorio fin*/
+
+
+/*
 .whatsappescritorio {
     position: sticky;
     bottom: 18px;
@@ -355,7 +407,7 @@ a {
     justify-content: flex-end;
     margin-right: 15px;
     z-index: 1;
-}
+}*/
 .whatsappescritorio a {
     text-decoration: none;
     color: #fff;
@@ -363,6 +415,7 @@ a {
     gap: 10px;
     align-items: center;
 }
+
 a.itemff.chat-whatsapp.appescrito {
       background: #10b60d;
     background: linear-gradient(135deg, #062e03 0%, #0f9a0c 70%, #12ad07 100%);
