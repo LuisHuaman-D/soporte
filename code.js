@@ -174,13 +174,13 @@ function updateAvailability() {
     percentage = 60;
   } else if (hour >= 13 && hour < 14) {
     percentage = 49;
-    message = 'Agenda para mañana antes del medio día';
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
   } else if (hour >= 14 && hour < 16) {
     percentage = 10;
-    message = 'Agenda para mañana antes del medio día';
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
   } else {
     percentage = 0;
-    message = 'Agenda para mañana';
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
   }
 
   const progressEl = document.getElementById('progress');
