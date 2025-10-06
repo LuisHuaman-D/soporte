@@ -167,15 +167,17 @@ function updateAvailability() {
   if (hour >= 8 && hour < 10) {
     percentage = 100;
   } else if (hour >= 10 && hour < 11) {
-    percentage = 90;
+    percentage = 95;
   } else if (hour >= 11 && hour < 12) {
-    percentage = 79;
+    percentage = 80;
   } else if (hour >= 12 && hour < 13) {
     percentage = 60;
   } else if (hour >= 13 && hour < 14) {
     percentage = 49;
+  } else if (hour >= 14 && hour < 15) {
+    percentage = 19;
     message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
-  } else if (hour >= 14 && hour < 16) {
+  } else if (hour >= 15 && hour < 16) {
     percentage = 10;
     message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
   } else {
