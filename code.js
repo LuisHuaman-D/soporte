@@ -146,6 +146,69 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/*
+barra de atención inicio
+*/
+
+function getLocalTimeByZone(timeZone) {
+  const options = { timeZone, hour: '2-digit', minute: '2-digit', hour12: false };
+  const formatter = new Intl.DateTimeFormat([], options);
+  const parts = formatter.formatToParts(new Date());
+  const hour = parseInt(parts.find(p => p.type === 'hour').value);
+  return hour;
+}
+
+// ✅ Actualizar la barra según hora de Lima
+function updateAvailability() {
+  const hour = getLocalTimeByZone('America/Lima');
+  let percentage = 0;
+  let message = '';
+
+  if (hour >= 8 && hour < 10) {
+    percentage = 100;
+  } else if (hour >= 10 && hour < 11) {
+    percentage = 90;
+  } else if (hour >= 11 && hour < 12) {
+    percentage = 79;
+  } else if (hour >= 12 && hour < 13) {
+    percentage = 60;
+  } else if (hour >= 13 && hour < 14) {
+    percentage = 49;
+    message = 'Agenda para mañana antes del medio día';
+  } else if (hour >= 14 && hour < 16) {
+    percentage = 10;
+    message = 'Agenda para mañana antes del medio día';
+  } else {
+    percentage = 0;
+    message = 'Agenda para mañana';
+  }
+
+  const progressEl = document.getElementById('progress');
+  const textEl = document.getElementById('progress-text');
+  const messageEl = document.getElementById('message');
+
+  // Actualizar barra y texto
+  progressEl.style.width = percentage + '%';
+  textEl.textContent = percentage + '%';
+  messageEl.textContent = message;
+
+  // Agregar efecto visual cuando está al 100%
+  if (percentage === 100) {
+    progressEl.classList.add('pulse');
+  } else {
+    progressEl.classList.remove('pulse');
+  }
+}
+
+// ✅ Ejecutar al cargar
+updateAvailability();
+
+// 🔄 Actualizar automáticamente cada hora
+setInterval(updateAvailability, 60 * 60 * 1000); // cada 1 hora
+/*
+barra de atención fin
+*/
+
 //Interacción de clientes
  /*
  const usuarios = [

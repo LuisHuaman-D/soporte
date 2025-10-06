@@ -7,7 +7,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    color:#fff;
+    color: #dfe6ff;
     overflow-x: hidden;
 }
 img {
@@ -64,7 +64,7 @@ p, h1, h2, h3, h4 {
     margin: 5px;
 }
 .mbtop{
-    margin-top: 35px;
+    margin-top: 20px;
 }
 .subti2{
     font-size: 16px;
@@ -236,7 +236,7 @@ background-repeat: no-repeat;
       
 .servitxt {
         display: inline-block; 
-        animation: scroll 20s linear infinite; 
+        animation: scroll 50s linear infinite; 
         opacity: 0;
         animation-delay: 0s; 
         font-size: 30px;
@@ -935,3 +935,73 @@ a.itemff.chat-whatsapp.appescrito {
 .ticont ul li {
         font-size: 24px;
 }
+
+
+/*
+barra de atención inicio
+*/
+
+.availability-widget {
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #dfe6ff;
+}
+
+.progress-bar {
+  background: #0d1946;
+  border-radius: 30px;
+ /* overflow: hidden;*/
+  height: 24px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  transition: width 1s ease;
+  background: linear-gradient(90deg, #e53935, #f9a825, #2ecc71);
+       padding: 0px 14px;
+}
+
+.progress span {
+  position: relative;
+  z-index: 2;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #eef4fd;
+}
+/* ✨ Efecto de pulso cuando está al 100% */
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 8px rgba(46, 204, 113, 0.6); }
+  50% { box-shadow: 0 0 16px rgba(46, 204, 113, 1); }
+  100% { box-shadow: 0 0 8px rgba(46, 204, 113, 0.6); }
+}
+
+/*
+barra de atención fin
+*/
