@@ -509,11 +509,11 @@ document.querySelectorAll('#step2 li').forEach(button => {
 
     // Detectar tamaño de pantalla
     const baseUrl = window.innerWidth > 900 
-      ? "https://web.whatsapp.com/send" 
+      ? "https://api.whatsapp.com/send" 
       : "https://api.whatsapp.com/send";
       
     // Generar URL con número y mensaje
-    const numero = "972186481";
+    const numero = "955119204";
     const url = `${baseUrl}?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
 
     // Abrir en nueva ventana
@@ -555,11 +555,11 @@ modal.addEventListener('click', (e) => {
                 
                         if (currentHref && currentHref.includes('whatsapp.com')) {
                             if (window.innerWidth > 700) {
-                                const newHref = currentHref.replace('api.whatsapp.com', 'web.whatsapp.com');
+                                const newHref = currentHref.replace('api.whatsapp.com', 'api.whatsapp.com');
                                 link.setAttribute('href', newHref);
                             } else {
                                 // Cambiar a api.whatsapp.com para móviles
-                                const newHref = currentHref.replace('web.whatsapp.com', 'api.whatsapp.com');
+                                const newHref = currentHref.replace('api.whatsapp.com', 'api.whatsapp.com');
                                 link.setAttribute('href', newHref);
                             }
                         }

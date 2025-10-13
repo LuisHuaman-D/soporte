@@ -7,7 +7,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    color: #dfe6ff;
+    color: #ffffff;
     overflow-x: hidden;
 }
 img {
@@ -390,6 +390,7 @@ a {
   display: block;
   opacity: 1;               /* 👈 fijamos que se quede visible */
   animation: bounceIn 0.8s ease;
+  z-index: 2;
 }
 
 /* Rebote repetitivo */
@@ -953,7 +954,7 @@ barra de atención inicio
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 8px;
-  color: #dfe6ff;
+  color: #ffffff;
 }
 
 .progress-bar {

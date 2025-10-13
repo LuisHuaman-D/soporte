@@ -1,11 +1,12 @@
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  effect: "fade",
+  effect: "slider",
   fadeEffect: {
-    crossFade: false
+    crossFade: true
   },
+  speed: 1000,
 autoplay: {
- delay: 6000,
+ delay: 8000,
  /*disableOnInteraction: true*/
   pauseOnMouseEnter: true
 },
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function checkScroll() {
-        if (window.scrollY > 200) {
+        if (window.scrollY > 50) {
             showBtnWithSound();
         }
     }
@@ -164,14 +165,14 @@ function updateAvailability() {
   let percentage = 0;
   let message = '';
 
-  if (hour >= 8 && hour < 10) {
+  if (hour >= 6 && hour < 10) {
     percentage = 100;
   } else if (hour >= 10 && hour < 11) {
-    percentage = 95;
+    percentage = 99;
   } else if (hour >= 11 && hour < 12) {
-    percentage = 80;
+    percentage = 89;
   } else if (hour >= 12 && hour < 13) {
-    percentage = 60;
+    percentage = 67;
   } else if (hour >= 13 && hour < 14) {
     percentage = 49;
   } else if (hour >= 14 && hour < 15) {
