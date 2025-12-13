@@ -39,9 +39,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <section>
         <div class="container2 texcenter lazy">
-            <p>Soporte técnico de PC y Laptops</p>
+            <h2 style="font-size: 16px;">Soporte técnico de PC y Laptops<h2>
             <h1>Soporte Técnico de Computadoras a Domicilio en Chorrillos</h1>
-            <p>Visitas y diagnóstico desde S/29.00 soles (Segun distrito y zona).</p>
+            <p>Visitas y diagnóstico desde S/29.00 soles.</p>
 
             <div class="sliderprincipal mbtop">
                 <div class="boxanima-2">
@@ -80,7 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
  <div class="availability-widget">
-                    <div class="label">🔆 Posibilidad de visitarte hoy mismo</div>
+                    <div class="label">🔆 Posibilidades de visitarte el día de hoy - Chorrillos</div>
                     <div class="progress-bar">
                         <div class="progress" id="progress">
                         <span id="progress-text">0%</span>
@@ -115,7 +115,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>La laptop funciona muy lenta</li>
                         <li>El equipo se apaga solo</li>
                         <li>Problemas de sobrecalentamiento</li>
-                        <li>PC no reconoce disco duro</li>
+                        <li>PC no reconoce el disco duro</li>
+                        <li>Problemas de Red - Wifi</li>
                     </ul>
                     </div>
                 </div>
@@ -179,9 +180,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section>
             <div class="container texcenter lazy">
-                <h2>Aumenta el rendimiento de tu laptop o pc</h2>
-                <p>Servicios a domicilio y oficinas a cotizar <br>
-                    Memorias ram, antivirus originales, discos sólidos.
+                <h2>Soporte técnico para  Chorrillos</h2>
+                <p>Te ofrecemos productos y servicios con garantía<br>
+                   
                 </p>
  <div class="bnnrsp mbtop ">
                 <img src="img/mejorar-velocidad-de-pc-tecnico-de-computadoras.webp" alt="mejorar velocidad de pc tecnico de computadoras a domicilio">
@@ -194,17 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
     
-                <section>
-            <div class="container texcenter lazy">
-                <h2>¡Laptops En Oferta!</h2>
-                <div class="bnnrsp mbtop ">
-                    <img src="img/laptops-lenovo-en-promocion.png" alt="">
-                    <img src="img/lenovo-i3-1315U-RAM-8GB-SSD512GB.png" alt="">
-                    <img src="img/lenovo-i5-13420H-RAM-8GB-SDD-512GB.png" alt="">
 
-                </div>
-            </div>
-        </section>
       <!-- SECCIÓN PRODUCTOS  -->
     <section>
         <div class="container texcenter lazy">
@@ -572,6 +563,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+/*
+barra de atención inicio
+*/
+
+function getLocalTimeByZone(timeZone) {
+  const options = { timeZone, hour: '2-digit', minute: '2-digit', hour12: false };
+  const formatter = new Intl.DateTimeFormat([], options);
+  const parts = formatter.formatToParts(new Date());
+  const hour = parseInt(parts.find(p => p.type === 'hour').value);
+  return hour;
+}
+
+// ✅ Actualizar la barra según hora de Lima
+function updateAvailability() {
+  const hour = getLocalTimeByZone('America/Lima');
+  let percentage = 0;
+  let message = '';
+
+  if (hour >= 6 && hour < 11) {
+    percentage = 100;
+  } else if (hour >= 11 && hour < 12) {
+    percentage = 99;
+  } else if (hour >= 12 && hour < 13) {
+    percentage = 89;
+  } else if (hour >= 13 && hour < 14) {
+    percentage = 67;
+  } else if (hour >= 14 && hour < 15) {
+    percentage = 49;
+  } else if (hour >= 15 && hour < 16) {
+    percentage = 19;
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
+  } else if (hour >= 16 && hour < 17) {
+    percentage = 10;
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
+  } else {
+    percentage = 0;
+    message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
+  }
+
+  const progressEl = document.getElementById('progress');
+  const textEl = document.getElementById('progress-text');
+  const messageEl = document.getElementById('message');
+
+  // Actualizar barra y texto
+  progressEl.style.width = percentage + '%';
+  textEl.textContent = percentage + '%';
+  messageEl.textContent = message;
+
+  // Agregar efecto visual cuando está al 100%
+  if (percentage === 100) {
+    progressEl.classList.add('pulse');
+  } else {
+    progressEl.classList.remove('pulse');
+  }
+}
+
+// ✅ Ejecutar al cargar
+updateAvailability();
+
+// 🔄 Actualizar automáticamente cada hora
+setInterval(updateAvailability, 60 * 60 * 1000); // cada 1 hora
+
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
