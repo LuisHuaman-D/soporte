@@ -82,11 +82,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="availability-widget">
                     <div class="label">🔆 Posibilidades de visitarte el día de hoy - Chorrillos</div>
                     <div class="progress-bar">
-                        <div class="progress" id="progress">
-                        <span id="progress-text">0%</span>
+                        <div class="progress" id="progresss">
+                        <span id="progress-texts">0%</span>
                         </div>
                     </div>
-                    <div class="message" id="message"></div>
+                    <div class="message" id="messages"></div>
                 </div>           
       
         </div>
@@ -606,9 +606,9 @@ function updateAvailability() {
     message = 'Agenda para mañana, te atendemos antes del mediodía previa coordinación.';
   }
 
-  const progressEl = document.getElementById('progress');
-  const textEl = document.getElementById('progress-text');
-  const messageEl = document.getElementById('message');
+  const progressEl = document.getElementById('progresss');
+  const textEl = document.getElementById('progress-texts');
+  const messageEl = document.getElementById('messages');
 
   // Actualizar barra y texto
   progressEl.style.width = percentage + '%';
