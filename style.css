@@ -281,11 +281,17 @@ background-repeat: no-repeat;
         border-radius: 20px;
 }
 
+.bnnrsp.mbtop img {
+        width: 387px;
+        max-width: 100%;
+}
+
 .bnnrsp {
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
     width: 100%;
+    flex-wrap: wrap;
 }
 .liproducts {
     display: grid;
