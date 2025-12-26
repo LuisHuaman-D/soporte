@@ -120,7 +120,20 @@ li, ul{
     object-fit: cover;
   }
 
+/* Estilo para que las tarjetas parezcan componentes */
+.mySwiper .swiper-slide {
+  border: 1px solid rgba(0, 242, 255, 0.3); /* Borde cian suave */
+  border-radius: 15px;
+  background: #1a1a1a; /* Fondo oscuro tipo chasis de PC */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
+/* Efecto de brillo en los botones de navegación */
+.swiper-button-next, .swiper-button-prev {
+  color: #00f2ff !important; /* Color neón */
+  filter: drop-shadow(0 0 5px #00f2ff);
+}
 /*--*/
 /*MARCAS CARRUSEL INICIO*/
 /* Contenedor general */

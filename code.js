@@ -1,25 +1,28 @@
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  effect: "slider",
-  fadeEffect: {
-    crossFade: true
+document.addEventListener('DOMContentLoaded', function() {
+var swiper1 = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+  perSlideOffset: 10, // Un poco más de separación para que se vean las capas
+  perSlideRotate: 4,  // Rotación sutil para el estilo "tech"
+  speed: 800,
+  
+  // SOLUCIÓN AL ERROR: 
+  loop: false,   // Mantenlo en false para evitar el error de consola
+  rewind: true,  // Al llegar al último, vuelve al primero suavemente
+  
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // Pausa si el usuario quiere leer el servicio técnico
   },
-  speed: 1000,
-autoplay: {
- delay: 8000,
- /*disableOnInteraction: true*/
-  pauseOnMouseEnter: true
-},
 
- /*pagination: {
- el: ".swiper-pagination",
- clickable: true
-},*/
-navigation: {
- nextEl: ".swiper-button-next",
- prevEl: ".swiper-button-prev"
-},
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
+});
+
 
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: 1,
@@ -59,42 +62,45 @@ const swiperMarcas = new Swiper(".mySwiperMarcas", {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    // 1. Selección de elementos
     const rucInput = document.getElementById("rucInput");
     const contactarAsesorBtn = document.querySelector(".contactarases");
 
-    const rucPattern = /^(10|20)\d{9}$/;
-
-    rucInput.addEventListener("input", function() {
-        this.value = this.value.replace(/\D/g, "");
-        if (this.value.length > 11) {
-            this.value = this.value.slice(0, 11);
-        }
-
-        if (rucPattern.test(this.value)) {
-            contactarAsesorBtn.classList.remove("disabled");
-        } else {
-            contactarAsesorBtn.classList.add("disabled");
-        }
-    });
-
-    contactarAsesorBtn.addEventListener("click", function(event) {
-        if (this.classList.contains("disabled")) {
-            event.preventDefault();
-            return; 
-        }
-
-        const rucValue = rucInput.value;
+    // 2. Condicional de seguridad: Solo se ejecuta si los elementos existen
+    if (rucInput && contactarAsesorBtn) {
+        
+        const rucPattern = /^(10|20)\d{9}$/;
         const numeroTelefono = "51972186481";
 
-        let mensajeRUC = `RUC: ${rucValue}`;
-        let mensajeServicios = `¡Hola! deseo cotizar sus servicios de:`;
+        // Validación en tiempo real
+        rucInput.addEventListener("input", function() {
+            // Limpiar caracteres no numéricos y limitar a 11
+            this.value = this.value.replace(/\D/g, "").slice(0, 11);
 
-        const whatsappLink = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensajeRUC)}%0A${encodeURIComponent(mensajeServicios)}`;
+            // Validar patrón RUC y actualizar estado visual del botón
+            const isValid = rucPattern.test(this.value);
+            contactarAsesorBtn.classList.toggle("disabled", !isValid);
+            
+            // Toque extra: feedback visual tecnológico
+            contactarAsesorBtn.style.opacity = isValid ? "1" : "0.5";
+            contactarAsesorBtn.style.cursor = isValid ? "pointer" : "not-allowed";
+        });
 
-        window.open(whatsappLink, "_blank");
-    });
+        // Manejo del Click
+        contactarAsesorBtn.addEventListener("click", function(event) {
+            event.preventDefault(); // Evitamos acciones por defecto siempre
+
+            if (this.classList.contains("disabled") || !rucPattern.test(rucInput.value)) {
+                return; // Si no es válido, no hace nada
+            }
+
+            const mensaje = `RUC: ${rucInput.value}\n¡Hola! deseo cotizar sus servicios de:`;
+            const whatsappLink = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;
+
+            window.open(whatsappLink, "_blank");
+        });
+    }
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("whatsapp-btn");
