@@ -453,9 +453,11 @@ a.itemff.chat-whatsapp.appescrito {
     height: 100%;
 }
 @media (min-width: 600px) {
+  
 .boxanimabton {
   animation: loopY 3s infinite ease-in-out;
 }
+
 
 
 @keyframes loopY {
@@ -895,6 +897,14 @@ background-size: cover;}
 }
 
 @media (max-width: 768px){
+  .mbtop {
+        margin-top: 20px;
+        overflow: hidden;
+}
+
+  .ticont ul li {
+        font-size: 18px!important;
+}
   .container{
     grid-template-columns: 1fr;
     box-sizing: border-box;
@@ -956,7 +966,7 @@ background-size: cover;}
 }
 
 .ticont ul li {
-        font-size: 24px;
+      font-size: 24px;
 }
 
 a#iniciar2 {
