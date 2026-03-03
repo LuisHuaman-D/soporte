@@ -973,6 +973,11 @@ a#iniciar2 {
         background: #004b00;
 }
 
+.ldg a#iniciar2 {
+        background: #004b00;
+        width: 100%;
+}
+
 /*
 barra de atención inicio
 */
