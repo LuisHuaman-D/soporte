@@ -1,6 +1,6 @@
 # Técnico de Computadoras a domicilio y oficinas en Lima y distritos
 
-> Servicio técnico profesional de reparación, mantenimiento y optimización de computadoras, laptops y redes para hogares y empresas en Lima Metropolitana.
+> Servicio técnico profesional de reparación, mantenimiento y optimización de computadoras, laptops y redes para hogares y empresas en Lima Metropolitana o provincias.
 
 ## Página Principal
 
@@ -15,6 +15,25 @@
 - **Garantía:** Respaldo y garantía en todos los servicios de reparación y mantenimiento realizados.
 - **Servicios corporativos:** Venta y cotización de laptops, monitores e impresoras para empresas.
 - **Teléfono de contacto:** 972 186 481
+
+## Especialidades
+
+- Reparación de pc
+- Reparación de laptops
+- Mantenimiento de pc y laptops
+- Instalación de antivirus
+- Instalación de sistema operativo Windows 10 y windows 11
+- Instalación de discos solidos 
+- Cambio de pasta térmica
+- Configuración de redes wifi
+- Configuración e instalación de impresoras
+- Ensamblaje de PC
+- Mejorar velocidad de pc o laptop previo diagnostico
+- Soluciones cuando la pc no da imagen
+- cambios de teclado de laptops a domicilio y en el taller fisico
+- Problemas de sobrecalentamiento del equipos
+- Instalación de memorias ram
+
 
 ## Servicios Destacados
 
@@ -43,3 +62,31 @@
 
 - [Técnico de Computadoras en Surquillo](https://tecnicodecomputadoras.com/tecnico-de-computadoras-a-domicilio-en-surquillo.html)
   Asistencia técnica, eliminación de virus y reparación de computadoras a domicilio en el distrito de Surquillo.
+
+
+
+## Preguntas frecuentes
+
+### ¿Atienden a domicilio?
+
+Sí. Previa cita y confirmación de cobertura.
+
+### ¿Atienden empresas?
+
+Sí. Trabajamos con factura o beleta
+
+### ¿Trabajan domingos?
+
+Sí. Previa confirmación de disponibilidad del técnico y cobertura de distrito.
+
+### ¿Reparan laptops?
+
+Sí. Según el problema se puede solucionar en su domicilio o recomendar que el equipo sea trasladado al taller para una revisión más detallada. 
+
+### ¿Instalan Windows?
+
+Sí. Instalamos Windows en equipos nuevos o reinstalación de windows.
+
+### ¿Configuran impresoras?
+
+Sí.
