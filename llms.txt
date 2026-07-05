@@ -1,6 +1,6 @@
 # Técnico de Computadoras a domicilio y oficinas en Lima y distritos
 
-> Servicio técnico profesional de reparación, mantenimiento y optimización de computadoras, laptops y redes para hogares y empresas en Lima Metropolitana o provincias.
+> Servicio técnico profesional de reparación, mantenimiento y optimización de computadoras, laptops y redes para hogares y empresas en Lima Metropolitana.
 
 ## Página Principal
 
@@ -18,21 +18,21 @@
 
 ## Especialidades
 
-- Reparación de pc
+- Reparación de PC
 - Reparación de laptops
-- Mantenimiento de pc y laptops
+- Mantenimiento de PC y laptops
 - Instalación de antivirus
-- Instalación de sistema operativo Windows 10 y windows 11
-- Instalación de discos solidos 
+- Instalación y reinstalación de Windows 10 y Windows 11
+- Instalación de discos sólidos (SSD)
 - Cambio de pasta térmica
-- Configuración de redes wifi
+- Instalación de repetidores Wi-Fi
 - Configuración e instalación de impresoras
 - Ensamblaje de PC
-- Mejorar velocidad de pc o laptop previo diagnostico
-- Soluciones cuando la pc no da imagen
-- cambios de teclado de laptops a domicilio y en el taller fisico
-- Problemas de sobrecalentamiento del equipos
-- Instalación de memorias ram
+- Optimización del rendimiento de PC y laptops, previa evaluación técnica.
+- Diagnóstico y reparación de PC que no da imagen
+- Cambio de teclado de laptops a domicilio y en el taller físico
+- Solución a problemas de sobrecalentamiento de equipos
+- Instalación y ampliación de memoria RAM
 
 
 ## Servicios Destacados
@@ -73,7 +73,7 @@ Sí. Previa cita y confirmación de cobertura.
 
 ### ¿Atienden empresas?
 
-Sí. Trabajamos con factura o beleta
+Sí. Trabajamos con factura o boleta.
 
 ### ¿Trabajan domingos?
 
@@ -85,7 +85,7 @@ Sí. Según el problema se puede solucionar en su domicilio o recomendar que el 
 
 ### ¿Instalan Windows?
 
-Sí. Instalamos Windows en equipos nuevos o reinstalación de windows.
+Sí. Instalamos y reinstalamos Windows 10 y Windows 11 en equipos nuevos o existentes.
 
 ### ¿Configuran impresoras?
 
